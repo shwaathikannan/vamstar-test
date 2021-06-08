@@ -36,6 +36,8 @@ public class BMICalculatorServiceTest {
 		person2.setHeightInCms(160);
 		person2.setWeightInKgs(82);
 		List<BMIInput> inputs = new ArrayList<BMIInput>();
+		inputs.add(person1);
+		inputs.add(person2);
 		BMIStatisticsRequest request = new BMIStatisticsRequest();
 		request.setInputs(inputs);
 		List<String> result = service.getStatistics(request);
